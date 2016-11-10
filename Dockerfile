@@ -1,4 +1,4 @@
-FROM metabrainz/base-image
+FROM metabrainz/consul-template-base
 
 MAINTAINER Laurent Monin <zas@metabrainz.org>
 RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold"
