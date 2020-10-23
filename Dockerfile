@@ -5,7 +5,7 @@ RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold"
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN rm -f /core
 
-ENV TELEGRAF_DEB telegraf_1.5.2-1_amd64.deb
+ENV TELEGRAF_DEB telegraf_1.16.0-1_amd64.deb
 RUN wget https://dl.influxdata.com/telegraf/releases/${TELEGRAF_DEB} && dpkg -i ${TELEGRAF_DEB} && rm -f ${TELEGRAF_DEB}
 
 ENV INFLUX_SERVER "http://localhost:8086"
